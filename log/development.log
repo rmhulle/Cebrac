@@ -1,0 +1,91 @@
+
+
+
+Started GET "/" for ::1 at 2015-03-07 18:12:51 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 2992ms (Views: 2981.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/animate/animate.css?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/datapicker/bootstrap-datepicker.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/patterns/header-profile.png" for ::1 at 2015-03-07 18:12:55 -0300
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for ::1 at 2015-03-07 18:12:55 -0300
