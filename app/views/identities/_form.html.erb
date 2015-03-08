@@ -1,0 +1,35 @@
+<div class="col-lg-5">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Basic form <small>Simple login form example</small></h5>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+              <%= simple_form_for(@identity) do |f| %>
+                  <%= f.error_notification %>
+
+                  <div class="form-inputs">
+                    <%= f.input :name %>
+                    <%= f.input :enrollment_id %>
+                    <%= f.input :lecture %>
+                      <div class="form-group" id="data_1">
+                        <label class="string optional control-label" for="identity_enrollment_id">Expiration</label>
+                          <div class="input-group date">
+                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                              <input class="string optional form-control" type="text" name="identity[expiration]" id="identity_expiration"> 
+                         </div>
+                      </div>
+                    <%= f.input :campus %>
+                    <%= f.input :user_name %>
+                    <%= f.input :user_id %>
+                    <%= f.input :last_printed %>
+                  </div>
+
+                  <div class="form-actions">
+                    <%= f.button :submit %>
+                  </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

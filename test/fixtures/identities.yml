@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  enrollment_id: MyString
+  class: MyString
+  expiration: 2015-03-08
+  campus: MyString
+  user_name: MyString
+  user_id: MyString
+  last_printed: 2015-03-08 00:58:33
+
+two:
+  name: MyString
+  enrollment_id: MyString
+  class: MyString
+  expiration: 2015-03-08
+  campus: MyString
+  user_name: MyString
+  user_id: MyString
+  last_printed: 2015-03-08 00:58:33
