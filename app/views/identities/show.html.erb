@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<p>
+  <strong>Imagem:</strong>
+<%= image_tag @identity.avatar.url(:thumb) %>
+</p>
 <p>
   <strong>Name:</strong>
   <%= @identity.name %>
@@ -40,5 +43,6 @@
   <%= @identity.last_printed %>
 </p>
 
-<%= link_to 'Edit', edit_identity_path(@identity, class: 'btn') %> |
+
+<%= link_to 'Edit', edit_identity_path(@identity, {class: 'btn btn-primary'}) %> |
 <%= link_to 'Back', identities_path %>

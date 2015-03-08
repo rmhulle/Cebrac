@@ -69,6 +69,6 @@ class IdentitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def identity_params
-      params.require(:identity).permit(:name, :enrollment_id, :lecture, :expiration, :campus, :user_name, :user_id, :last_printed)
+      params.require(:identity).permit(:name, :enrollment_id, :lecture, :expiration, :campus, :user_name, :user_id, :last_printed, :avatar)
     end
 end
