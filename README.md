@@ -25,10 +25,10 @@ Sistema de identidade estudantil
 
 ### Identity
 - name
-- matricula
-- documento
-- curso
-- unidade
-- Validade
-- foto
-- ultima vez impresso
+- enrollment_id
+- documento_number
+- class, as class.name
+- Campus, as campus.name
+- Expiration
+- picture
+- last_printed, as :date
