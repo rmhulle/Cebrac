@@ -6,6 +6,7 @@ gem 'bootstrap-sass', '3.2.0.0'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'simple_form'
+gem 'jquery-rails'
 gem 'sqlite3'
 
 gem 'sass-rails', '~> 4.0.0'
