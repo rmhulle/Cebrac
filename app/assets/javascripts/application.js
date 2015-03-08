@@ -14,4 +14,6 @@
 //= require datapicker/bootstrap-datepicker.js
 //= require inspinia.js
 //= require webcam.js
+//= require jquery.jcrop
+//= require papercrop
 

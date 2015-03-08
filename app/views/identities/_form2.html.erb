@@ -41,8 +41,8 @@
                     <%= f.input :user_name %>
                     <%= f.input :user_id %>
                     <%= f.input :last_printed %>
-                    
-
+                    <%= f.cropbox :avatar, :width => 500 %>
+                    <%= f.crop_preview :avatar, :width => 150 %>
                     </div>
 
                   <div class="form-actions">

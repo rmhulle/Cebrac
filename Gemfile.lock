@@ -104,6 +104,10 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    papercrop (0.2.0)
+      jquery-rails
+      paperclip (>= 3.4)
+      rails (>= 3.1)
     rack (1.6.0)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
@@ -182,6 +186,7 @@ DEPENDENCIES
   jquery-rails
   meta_request
   paperclip (~> 4.2)
+  papercrop
   rails
   sass-rails (~> 4.0.0)
   simple_form
