@@ -1,9 +1,12 @@
 Myapp::Application.routes.draw do
-  resources :identities
+
+  resources :identities do
+    post 'upload', :on => :collection
+  end
 
   devise_for :users
 
-    devise_scope :user do
+  devise_scope :user do
     authenticated :user do
       root 'home#index', as: :authenticated_root
     end
@@ -17,7 +20,7 @@ Myapp::Application.routes.draw do
   get "home/index"
   get "home/minor"
 
-  
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

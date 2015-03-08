@@ -13,4 +13,5 @@
 //= require slimscroll/jquery.slimscroll.min.js
 //= require datapicker/bootstrap-datepicker.js
 //= require inspinia.js
+//= require webcam.js
 

@@ -25,6 +25,7 @@ class IdentitiesController < ApplicationController
   # POST /identities.json
   def create
     @identity = Identity.new(identity_params)
+    @identity.avatar = File.new(upload_path)
 
     respond_to do |format|
       if @identity.save
@@ -35,6 +36,14 @@ class IdentitiesController < ApplicationController
         format.json { render json: @identity.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+
+  def upload
+    File.open(upload_path, 'wb') do |f|
+      f.write request.raw_post
+    end
+    render :text => "ok"
   end
 
   # PATCH/PUT /identities/1
@@ -70,5 +79,8 @@ class IdentitiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def identity_params
       params.require(:identity).permit(:name, :enrollment_id, :lecture, :expiration, :campus, :user_name, :user_id, :last_printed, :avatar)
+    end
+    def upload_path # is used in upload and create
+      File.join(Rails.root, 'tmp', 'photo.jpg')
     end
 end
