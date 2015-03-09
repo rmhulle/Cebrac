@@ -12,6 +12,7 @@
 //= require peity/jquery.peity.min.js
 //= require slimscroll/jquery.slimscroll.min.js
 //= require datapicker/bootstrap-datepicker.js
+//= require steps/jquery.steps.min.js
 //= require inspinia.js
 //= require webcam.js
 //= require jquery.jcrop

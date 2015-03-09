@@ -1,6 +1,8 @@
 class IdentitiesController < ApplicationController
-  before_action :set_identity, only: [:show, :edit, :update, :destroy]
 
+  before_action :set_identity, only: [:show, :edit, :update, :destroy, :review]
+  # caso não esteja fazendo o upload das photos 
+  skip_before_filter :verify_authenticity_token, :only => [:edit, :new, :create, :upload]
   # GET /identities
   # GET /identities.json
   def index
@@ -25,11 +27,11 @@ class IdentitiesController < ApplicationController
   # POST /identities.json
   def create
     @identity = Identity.new(identity_params)
+    @identity.user_name = current_user.name
     @identity.avatar = File.new(upload_path)
-
     respond_to do |format|
       if @identity.save
-        format.html { redirect_to @identity, notice: 'Identity was successfully created.' }
+        format.html { render "review", notice: 'Identity was successfully created.' }
         format.json { render action: 'show', status: :created, location: @identity }
       else
         format.html { render action: 'new' }
@@ -38,6 +40,12 @@ class IdentitiesController < ApplicationController
     end
   end
 
+  def review
+
+  end  
+
+  def print
+  end  
 
   def upload
     File.open(upload_path, 'wb') do |f|
@@ -51,8 +59,7 @@ class IdentitiesController < ApplicationController
   def update
     respond_to do |format|
       if @identity.update(identity_params)
-        format.html { redirect_to @identity, notice: 'Identity was successfully updated.' }
-        format.json { head :no_content }
+        format.html { render action: 'show' }
       else
         format.html { render action: 'edit' }
         format.json { render json: @identity.errors, status: :unprocessable_entity }
@@ -81,6 +88,6 @@ class IdentitiesController < ApplicationController
       params.require(:identity).permit(:name, :enrollment_id, :lecture, :expiration, :campus, :user_name, :user_id, :last_printed, :avatar, :avatar_original_w, :avatar_original_h, :avatar_box_w, :avatar_crop_x, :avatar_crop_y, :avatar_crop_w, :avatar_crop_h, :avatar_aspect)
     end
     def upload_path # is used in upload and create
-      File.join(Rails.root, 'tmp', 'photo.jpg')
+      File.join(Rails.root, 'tmp','photo.jpg')
     end
 end

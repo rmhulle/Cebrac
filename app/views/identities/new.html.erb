@@ -1,6 +1,6 @@
 <h1>New Identity</h1>
 
-<%= render 'form' %>
+<%= render 'form3' %>
 
 <%= link_to 'Back', identities_path %>
 
@@ -31,4 +31,22 @@
     webcam.set_hook('onLoad', 'onload_complete');
     webcam.set_hook('onComplete', 'upload_complete');
     $('#webcam').html(webcam.get_html(640, 480));
+    
+
+
+
+    $("#form").steps({
+        bodyTag: "fieldset",
+        labels: {
+            cancel: "Cancelar",
+            current: "current step:",
+            pagination: "Pagination",
+            finish: "Revisar Carterinha",
+            next: "Avançar",
+            previous: "Voltar",
+            loading: "Loading ..."
+        }
+
+    });
+  
 </script>

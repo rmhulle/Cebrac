@@ -2,6 +2,8 @@ Myapp::Application.routes.draw do
 
   resources :identities do
     post 'upload', :on => :collection
+    get  'review'
+    get  'print'
   end
 
   devise_for :users

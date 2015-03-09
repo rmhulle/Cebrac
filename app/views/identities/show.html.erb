@@ -1,48 +1,74 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Imagem:</strong>
-<%= image_tag @identity.avatar.url(:thumb) %>
-</p>
-<p>
-  <strong>Name:</strong>
-  <%= @identity.name %>
-</p>
-
-<p>
-  <strong>Enrollment:</strong>
-  <%= @identity.enrollment_id %>
-</p>
-
-<p>
-  <strong>Lecture:</strong>
-  <%= @identity.lecture %>
-</p>
-
-<p>
-  <strong>Expiration:</strong>
-  <%= @identity.expiration %>
-</p>
-
-<p>
-  <strong>Campus:</strong>
-  <%= @identity.campus %>
-</p>
-
-<p>
-  <strong>User name:</strong>
-  <%= @identity.user_name %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @identity.user_id %>
-</p>
-
-<p>
-  <strong>Last printed:</strong>
-  <%= @identity.last_printed %>
-</p>
+<style>
 
 
-<%= link_to 'Edit', edit_identity_path(@identity, {class: 'btn btn-primary'}) %> |
+div.Carterinha {
+  background-size: 100% 100%;
+  background-image: url("/carterinha.png");
+  width: 229.6pt; 
+  height: 153.07pt;
+} 
+
+div.esquerda {
+
+margin-right: 96.38pt;
+height: 153.07pt;
+}
+
+div.direita {
+
+margin-top: -153.07pt;
+margin-left: 93.38pt;
+height: 153.07pt;
+
+}
+
+div.dados{
+
+margin-top: 24pt;
+font-size: 10pt;
+color: black;
+
+}
+
+div.info{
+margin-bottom: 20pt;
+
+
+}
+
+
+
+img.avatar{
+
+margin-top: 8.4pt;
+margin-left: 10.1pt;
+
+width: 62.5pt; 
+height: 73pt;
+
+}
+
+</style>
+
+<div class="wrapper wrapper-content">
+  <div class="Carterinha" >
+      <div class="esquerda">
+      <%= image_tag @identity.avatar.url(:thumb), :class => 'avatar' %>
+      <img src="">
+      <img src="">
+      </div>
+      <div class="direita">
+        <div class="dados">
+        <div class="info">Rodrigo Missagia Hulle</div>
+        <div class="info">Vila Velha</div>
+        <div class="info">0256544</div>
+        <div class="info">213243-4</div>
+        </div>
+      </div>
+  </div>              
+</div>
+
+<%= link_to 'Edit', edit_identity_path(@identity) %> |
 <%= link_to 'Back', identities_path %>
+
+
