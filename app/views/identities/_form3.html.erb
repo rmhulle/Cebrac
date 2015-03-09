@@ -1,0 +1,58 @@
+
+    <div class="col-lg-6">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5>Wizard with Validation</h5>
+            </div>
+            <div class="ibox-content">
+                <h2>
+                    Validation Wizard Form
+                </h2>
+                <p>
+                    This example show how to use Steps with jQuery Validation plugin.
+                </p>
+
+                <div id="form" class="wizard-big">
+                    <h1>Fotografia</h1>
+                    <fieldset>
+                        <h2>Tire uma Foto com WebCam</h2>
+                        <div class="row">
+                            <div class="container" id="webcam"></div>
+                            <div class="ibox">
+                                <button type="button" class="btn btn-w-m btn-primary" value="Take picture" onclick="webcam.snap();">Tirar Foto</button>
+                                <button type="button" class="btn btn-w-m btn-primary" value="Reset" onclick="webcam.reset();">Reiniciar</button>
+                            </div>                                      
+                        </div>
+                    </fieldset>
+                    <h1>Dados</h1>
+                    <fieldset>
+                        <h2>Informações dos Alunos</h2>
+                        <div class="row">
+                            <%= simple_form_for(@identity, :class => 'big-wizard', :html => {:multipart => true}) do |f| %>
+                              <%= f.error_notification %>
+
+                              <div class="form-inputs">
+                                <%= f.input :name %>
+                                <%= f.input :enrollment_id %>
+                                <%= f.input :lecture %>
+                                <%= f.input :campus %>
+                                  <div class="form-group" id="data_1">
+                                    <label class="string optional control-label" for="identity_enrollment_id">Expiration</label>
+                                      <div class="input-group date">
+                                          <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                          <input class="string optional form-control" type="text" name="identity[expiration]" id="identity_expiration"> 
+                                     </div>
+                                  </div>
+                                
+                                </div>
+                              <div class="form-actions">
+                                <%= f.button :submit %>
+                              </div>
+                            <% end %>
+                        </div>
+                    </fieldset>    
+                    </div>        
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,107 @@
+<style>
+
+
+div.Carterinha {
+  background-size: 100% 100%;
+  background-image: url("/carterinha.png");
+  width: 229.6pt; 
+  height: 153.07pt;
+} 
+
+div.esquerda {
+
+margin-right: 96.38pt;
+height: 153.07pt;
+}
+
+div.direita {
+
+margin-top: -153.07pt;
+margin-left: 93.38pt;
+height: 153.07pt;
+
+}
+
+div.dados{
+
+margin-top: 24pt;
+font-size: 10pt;
+color: black;
+
+}
+
+div.info{
+margin-bottom: 20pt;
+
+
+}
+
+
+
+img.avatar{
+
+margin-top: 8.4pt;
+margin-left: 10.1pt;
+
+width: 62.5pt; 
+height: 73pt;
+
+}
+
+</style>
+
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-6">
+                <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Ajuste a foto</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <%= simple_form_for(@identity, :html => {:multipart => true}) do |f| %>
+                                <%= f.error_notification %>
+                                <div class="form-inputs">
+                                    <%= f.cropbox :avatar, :width => 500 %>
+                                </div>
+                                <div class="form-actions">
+                                  <%= f.button :submit %>
+                                </div>
+                                
+   
+                        </div>
+                </div>
+            </div>
+                
+
+            <div class="col-lg-6">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Preview da Carteirinha</h5>
+                    </div>
+                    <div class="ibox-content">   
+                        <div class="Carterinha" >
+                              <div class="esquerda">
+                              <%= f.crop_preview :avatar, :class => 'avatar' %>
+                              <img src="">
+                              <img src="">
+                              </div>
+                              <div class="direita">
+                                <div class="dados">
+                                <div class="info">Rodrigo Missagia Hulle</div>
+                                <div class="info">Vila Velha</div>
+                                <div class="info">0256544</div>
+                                <div class="info">213243-4</div>
+                                </div>
+                              </div>
+                          </div>              
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>
+
+                        
