@@ -6,14 +6,11 @@
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="clear">
                             <span class="block m-t-xs">
-                                <strong class="font-bold">Bem vindo, <%= current_user.name %> </strong>
+                                <strong class="font-bold"><%= current_user.name %>,<br> Seja Bem vindo!!</strong>
                             </span> 
                         </span>
                     </a>
 
-                </div>
-                <div class="logo-element">
-                    IN+
                 </div>
             </li>
             <li class="<%= 'active' if current_page?('/') %>">
@@ -21,33 +18,33 @@
                 <i class="fa fa-laptop"></i> <span class="nav-label">Principal</span>
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('/home/minor') %>">
-                <%= link_to "/home/minor" do %>
+            <li class="<%= 'active' if current_page?('/identities') %>">
+                <%= link_to identities_path do %>
                 <i class="fa fa-search"></i> <span class="nav-label">Buscar Alunos</span>
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('/home/minor') %>">
-                <%= link_to "/home/minor" do %>
+            <li class="<%= 'active' if current_page?('/identities/new') %>">
+                <%= link_to new_identity_path do %>
                 <i class="fa fa-plus-square-o"></i> <span class="nav-label">Cadatrar Aluno</span>
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('/home/minor') %>">
+            <li class="<%= 'active' if current_page?('/users/') %>">
                 <%= link_to "/home/minor" do %>
                 <i class="fa fa-group"></i> <span class="nav-label">Gerenciar Usuários</span>
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('/home/minor') %>">
+            <li class="<%= 'active' if current_page?('/lectures') %>">
                 <%= link_to "/home/minor" do %>
                 <i class="fa fa-graduation-cap"></i> <span class="nav-label">Cadastrar Cursos</span>
                 <% end %>
             </li>  
-            <li class="<%= 'active' if current_page?('/home/minor') %>">
+            <li class="<%= 'active' if current_page?('/campus') %>">
                 <%= link_to "/home/minor" do %>
                 <i class="fa fa-home"></i> <span class="nav-label">Cadatrar Unidades</span>
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('/home/minor') %>">
-                <%= link_to "/home/minor" do %>
+            <li class="<%= 'active' if current_page?('/users/signout') %>">
+                <%= link_to destroy_user_session_path, :method => :delete  do %>
                 <i class="fa fa-sign-out"></i> <span class="nav-label">Sair do Sistema</span>
                 <% end %>
             </li>                         

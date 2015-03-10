@@ -11,8 +11,29 @@
  *= require_self
  *= require font-awesome
  *= require animate/animate.css
- *= require style
+ 
  *= require jquery.jcrop
  *= require steps/jquery.steps.css
  *= require datapicker/datepicker3.css
+ *= require dataTables/dataTables.bootstrap.css
+ *= require dataTables/dataTables.responsive.css
+ *= require dataTables/dataTables.tableTools.min.css
+ *= require jquery-ui/jquery-ui-1.10.4.custom.min.css
+ *= require jqGrid/ui.jqgrid.css
+ *= require style
  */
+
+div.webcam-clearfix {
+margin-left: 100px;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+div.webcam-buttons {
+margin-left: 100px;
+margin-top: 30px;
+margin-bottom: 30px;
+	button {
+		margin-right: 30px;
+		width: 303px;}
+}

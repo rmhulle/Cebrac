@@ -1,23 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Identities</h1>
+<div class="wrapper wrapper-content animated fadeInRight">
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Enrollment</th>
-      <th>Lecture</th>
-      <th>Expiration</th>
-      <th>Campus</th>
-      <th>User name</th>
-      <th>User</th>
-      <th>Last printed</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="col-lg-12">
+      <%= link_to('Adicionar Novo Aluno', new_identity_path, html_options = {:class=>"btn btn-primary btn-lg btn-block" }) %>    
+    </div>
 
-  <tbody>
+<div class="col-lg-4">
+
+</div>
+        </div>
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+<div class="col-lg-12">
+<div class="ibox float-e-margins">
+<div class="ibox-title">
+    <h5>Encontre Alunos</h5>
+    
+</div>
+<div class="ibox-content">
+
+<table class="table table-striped table-bordered table-hover dataTables-example">
+<thead>
+<tr>
+    <th>Nome do aluno</th>
+    <th>Matrícula</th>
+    <th>Aula</th>
+    <th>Validade</th>
+    <th>Unidade</th>
+    <th>Usuário</th>
+    <th>Última Impressão</th>
+    <th>Mostrar</th>
+    <th>Editar</th>
+    <th>Deletar</th>
+</tr>
+</thead>
+<tbody>
     <% @identities.each do |identity| %>
       <tr>
         <td><%= identity.name %></td>
@@ -26,15 +44,39 @@
         <td><%= identity.expiration %></td>
         <td><%= identity.campus %></td>
         <td><%= identity.user_name %></td>
-        <td><%= identity.user_id %></td>
         <td><%= identity.last_printed %></td>
-        <td><%= link_to 'Show', identity %></td>
-        <td><%= link_to 'Edit', edit_identity_path(identity) %></td>
-        <td><%= link_to 'Destroy', identity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', identity %></td>
+        <td><%= link_to 'Editar', edit_identity_path(identity) %></td>
+        <td><%= link_to 'Deletar', identity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
+</tbody>
+
 </table>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+
+
+$(function() {
+
+      $('.dataTables-example').dataTable({
+          "dom": 'T<"clear">lfrtip',
+          "tableTools": {
+              "sSwfPath": "/assets/dataTables/swf/copy_csv_xls_pdf.swf"
+          }
+      });
+});
+
+
+
+</script>
 
 <br>
 

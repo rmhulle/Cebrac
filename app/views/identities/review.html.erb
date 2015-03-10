@@ -33,10 +33,7 @@ color: black;
 div.info{
 margin-bottom: 20pt;
 
-
 }
-
-
 
 img.avatar{
 
@@ -83,7 +80,7 @@ height: 73pt;
                     <div class="ibox-content">   
                         <div class="Carterinha" >
                               <div class="esquerda">
-                              <%= f.crop_preview :avatar, :class => 'avatar' %>
+                              <%= f.crop_preview :avatar, html_options = { :class=>"avatar" } %>
                               <img src="">
                               <img src="">
                               </div>
