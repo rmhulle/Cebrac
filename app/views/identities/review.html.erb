@@ -45,6 +45,12 @@ height: 73pt;
 
 }
 
+div#avatar_crop_preview_wrapper{
+  
+  margin-left: 13px
+
+}
+
 </style>
 
 
@@ -60,7 +66,7 @@ height: 73pt;
                             <%= simple_form_for(@identity, :html => {:multipart => true}) do |f| %>
                                 <%= f.error_notification %>
                                 <div class="form-inputs">
-                                    <%= f.cropbox :avatar, :width => 500 %>
+                                    <%= f.cropbox :avatar, :width => 500, :height => 300 %>
                                 </div>
                                 <div class="form-actions">
                                   <%= f.button :submit %>
@@ -80,9 +86,7 @@ height: 73pt;
                     <div class="ibox-content">   
                         <div class="Carterinha" >
                               <div class="esquerda">
-                              <%= f.crop_preview :avatar, html_options = { :class=>"avatar" } %>
-                              <img src="">
-                              <img src="">
+                                <%= f.crop_preview :avatar, html_options = { :class => "avatar"} %>
                               </div>
                               <div class="direita">
                                 <div class="dados">

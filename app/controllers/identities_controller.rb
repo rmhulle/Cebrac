@@ -29,15 +29,23 @@ class IdentitiesController < ApplicationController
     @identity = Identity.new(identity_params)
     @identity.user_name = current_user.name
     @identity.avatar = File.new(upload_path)
-    respond_to do |format|
-      if @identity.save
-        format.html { render "review", notice: 'Identity was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @identity }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @identity.errors, status: :unprocessable_entity }
-      end
+
+
+    if @identity.save
+      render 'new'
+    else
+      render 'new'
     end
+
+#    respond_to do |format|
+#      if @identity.save
+#        format.html { render "review", notice: 'Identity was successfully created.' }
+#        format.json { render action: 'show', status: :created, location: @identity }
+#      else
+#        format.html { render action: 'new' }
+#        format.json { render json: @identity.errors, status: :unprocessable_entity }
+#      end
+#    end
   end
 
   def review

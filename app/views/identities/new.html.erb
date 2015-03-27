@@ -1,7 +1,5 @@
 <%= render 'form3' %>
 
-<%= link_to 'Back', identities_path %>
-
 <script type="text/javascript">
     function onload_complete(msg) {
         // fetch the CSRF meta tag data
@@ -35,14 +33,15 @@
 
     $("#form").steps({
         bodyTag: "fieldset",
+        enableFinishButton : false,
         labels: {
             cancel: "Cancelar",
             current: "current step:",
             pagination: "Pagination",
-            finish: "Revisar Carterinha",
+            finish: "Imprimir Carterinha",
             next: "Avançar",
             previous: "Voltar",
-            loading: "Loading ..."
+            loading: "Carregando ..."
         }
 
     });

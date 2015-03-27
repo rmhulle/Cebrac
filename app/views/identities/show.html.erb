@@ -1,71 +1,210 @@
-<style>
-
-
-div.Carterinha {
+<style> 
+#Camada_1 {
+  background-image: url("/camada_1.jpg");
+  position: relative;
+  z-index: 1;
   background-size: 100% 100%;
-  background-image: url("/carterinha.png");
-  width: 229.6pt; 
+  width: 243.78pt; 
   height: 153.07pt;
-} 
-
-div.esquerda {
-
-margin-right: 96.38pt;
-height: 153.07pt;
 }
 
-div.direita {
-
-margin-top: -153.07pt;
-margin-left: 93.38pt;
-height: 153.07pt;
-
+#nome_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 8.5pt;
+  z-index: 5;
 }
 
-div.dados{
-
-margin-top: 24pt;
-font-size: 10pt;
-color: black;
-
+#nome_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 21pt;
+  width: 147.4pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  z-index: 5;
 }
 
-div.info{
-margin-bottom: 20pt;
+#curso_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 42.52pt;
+  z-index: 5;
 
 
 }
-
-
-
-img.avatar{
-
-margin-top: 8.4pt;
-margin-left: 10.1pt;
-
-width: 62.5pt; 
-height: 73pt;
-
+#curso_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 55pt;
+  width: 147.4pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
 }
 
+#unidade_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 76.54pt;
+  z-index: 5;
+
+
+}
+#unidade_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 89pt;
+  width: 63pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+#matricula_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 158.74pt;
+  top: 76.54pt;
+  z-index: 5;
+
+}
+#matricula_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 158.74pt;
+  top: 89pt;
+  width: 79.37pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+#validade_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 107.71pt;
+  z-index: 5;
+
+
+}
+#validade_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 121pt;
+  width: 63pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+#documento_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 158.74pt;
+  top: 107.71pt;
+  z-index: 5;
+
+
+}
+#documento_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 158.74pt;
+  top: 121pt;
+  width: 79.37pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+#foto_place {
+
+  position: absolute;
+  left: 13pt;
+  top: 9pt;
+  width: 67pt;
+  height: 75pt;
+}
+
+img.avatar {
+  width: 67pt;
+  height: 75pt;
+}
 </style>
 
+
 <div class="wrapper wrapper-content">
-  <div class="Carterinha" >
-      <div class="esquerda">
-      <%= image_tag @identity.avatar.url(:thumb), :class => 'avatar' %>
-      <img src="">
-      <img src="">
-      </div>
-      <div class="direita">
-        <div class="dados">
-        <div class="info">Rodrigo Missagia Hulle</div>
-        <div class="info">Vila Velha</div>
-        <div class="info">0256544</div>
-        <div class="info">213243-4</div>
-        </div>
-      </div>
-  </div>              
+<div class="container">
+
+  <div id="Camada_1">
+      <div id="foto_place"><%= image_tag @identity.avatar.url(:thumb), :class => 'avatar' %></div>
+      <div id="nome_label">NOME</div>
+      <p id="nome_place"><%= @identity.name %></p>
+      
+      <div id="curso_label">CURSO</div>
+      <div id="curso_place"><%= @identity.lecture %></div>
+
+      <div id="unidade_label">UNIDADE</div>
+      <div id="unidade_place"><%= @identity.campus %></div>      
+
+      
+      <div id="matricula_label">MATRÍCULA</div>
+      <div id="matricula_place"><%= @identity.enrollment_id %></div>
+      
+      
+      <div id="validade_label">VALIDADE</div>
+      <div id="validade_place"><%= @identity.expiration %></div>
+
+      <div id="documento_label">DOCUMENTO</div>
+      <div id="documento_place">213243-4 ES</div>
+  </div>
+
+
+</div>
 </div>
 
 <%= link_to 'Edit', edit_identity_path(@identity) %> |

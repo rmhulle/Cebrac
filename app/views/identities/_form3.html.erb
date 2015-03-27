@@ -1,4 +1,182 @@
-<div class="col-md-8 col-md-offset-2">
+<style> 
+#Camada_1 {
+  background-image: url("/camada_1.jpg");
+  position: relative;
+  z-index: 1;
+  background-size: 100% 100%;
+  width: 243.78pt; 
+  height: 153.07pt;
+}
+
+#nome_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 8.5pt;
+  z-index: 5;
+}
+
+#nome_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 21pt;
+  width: 147.4pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+#curso_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 42.52pt;
+  z-index: 5;
+
+
+}
+#curso_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 55pt;
+  width: 147.4pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+#unidade_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 76.54pt;
+  z-index: 5;
+
+
+}
+#unidade_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 89pt;
+  width: 63pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+#matricula_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 158.74pt;
+  top: 76.54pt;
+  z-index: 5;
+
+}
+#matricula_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 158.74pt;
+  top: 89pt;
+  width: 79.37pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+#validade_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 107.71pt;
+  z-index: 5;
+
+
+}
+#validade_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 121pt;
+  width: 63pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+#documento_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 158.74pt;
+  top: 107.71pt;
+  z-index: 5;
+
+
+}
+#documento_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 158.74pt;
+  top: 121pt;
+  width: 79.37pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+#foto_place {
+
+  position: absolute;
+  left: 13pt;
+  top: 9pt;
+  width: 67pt;
+  height: 75pt;
+}
+
+img.avatar {
+  width: 67pt;
+  height: 75pt;
+}
+</style>
+
+<div class="col-md-10 col-md-offset-1">
         <div class="ibox">
             <div class="ibox-title">
                 <h5>Formulário de Cadatro de Novos Alunos</h5>
@@ -23,29 +201,53 @@
                         <div class="row">
                             <%= simple_form_for(@identity, :class => 'big-wizard', :html => {:multipart => true}) do |f| %>
                               <%= f.error_notification %>
-
                               <div class="form-inputs">
-                                <%= f.input :name %>
-                                <%= f.input :enrollment_id %>
-                                <%= f.input :lecture %>
-                                <%= f.input :campus %>
-                                  <div class="form-group" id="data_1">
-                                    <label class="string optional control-label" for="identity_enrollment_id">Expiration</label>
-                                      <div class="input-group date">
-                                          <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                          <input class="string optional form-control" type="text" name="identity[expiration]" id="identity_expiration"> 
-                                     </div>
-                                  </div>
-                                
+                                <%= f.input :name, label: 'Nome do Aluno', input_html: { maxlength: 26 }, placeholder: 'Ex. Daniel Carvalho' %>
+                                <%= f.input :lecture, label: 'Curso', input_html: { maxlength: 26 }, placeholder: 'Ex. Administração' %>
+                                <%= f.input :campus, label: 'Unidade', input_html: { maxlength: 11 }, placeholder: 'Ex. Vila Velha' %>
+                                <%= f.input :enrollment_id, label: 'Matrícula', input_html: { maxlength: 12 }, placeholder: 'Ex. 0123456' %>
+                                <%= f.input :expiration, label: 'Validade', placeholder: 'Ex. 20/12/2020' %>  
+                                <%= f.input :document, label: 'Documento', input_html: { maxlength: 11 }, placeholder: 'Ex. 223443-6 ES' %>
                                 </div>
                               <div class="form-actions">
-                                <%= f.button :submit %>
+                                <%= f.button :submit, 'Criar Identidade' %>
                               </div>
                             <% end %>
+                        </div>
+                    </fieldset>    
+                    <h1>Revisar Identidade</h1>
+                    <fieldset>
+                        <h2>Alinhe a Imagem</h2>
+                        <div class="row">
+                            <div class="container">
+
+                              <div id="Camada_1">
+                                  <div id="nome_label">NOME</div>
+                                  <p id="nome_place">Rodrigo Missagia Hulle hhhs</p>
+                                  
+                                  <div id="curso_label">CURSO</div>
+                                  <div id="curso_place">Administração</div>
+
+                                  <div id="unidade_label">UNIDADE</div>
+                                  <div id="unidade_place">Vila Velha</div>      
+
+                                  
+                                  <div id="matricula_label">MATRÍCULA</div>
+                                  <div id="matricula_place">123456</div>
+                                  
+                                  
+                                  <div id="validade_label">VALIDADE</div>
+                                  <div id="validade_place">25/12/2022</div>
+
+                                  <div id="documento_label">DOCUMENTO</div>
+                                  <div id="documento_place">213243-4 ES</div>
+                              </div>
+
+
+                            </div>
                         </div>
                     </fieldset>    
                     </div>        
             </div>
         </div>
     </div>
-

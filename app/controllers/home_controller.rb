@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def minor
   end
+
+  def modelo
+  end
 end
