@@ -199,7 +199,7 @@ img.avatar {
                     <fieldset>
                         <h2>Informações dos Alunos</h2>
                         <div class="row">
-                            <%= simple_form_for(@identity, :class => 'big-wizard', :html => {:multipart => true}) do |f| %>
+                            <%= simple_form_for(@identity, :remote => true, :class => 'big-wizard', :html => {:multipart => true, role: :form, 'data-model' => 'identity'}) do |f| %>
                               <%= f.error_notification %>
                               <div class="form-inputs">
                                 <%= f.input :name, label: 'Nome do Aluno', input_html: { maxlength: 26 }, placeholder: 'Ex. Daniel Carvalho' %>
@@ -219,30 +219,7 @@ img.avatar {
                     <fieldset>
                         <h2>Alinhe a Imagem</h2>
                         <div class="row">
-                            <div class="container">
-
-                              <div id="Camada_1">
-                                  <div id="nome_label">NOME</div>
-                                  <p id="nome_place">Rodrigo Missagia Hulle hhhs</p>
-                                  
-                                  <div id="curso_label">CURSO</div>
-                                  <div id="curso_place">Administração</div>
-
-                                  <div id="unidade_label">UNIDADE</div>
-                                  <div id="unidade_place">Vila Velha</div>      
-
-                                  
-                                  <div id="matricula_label">MATRÍCULA</div>
-                                  <div id="matricula_place">123456</div>
-                                  
-                                  
-                                  <div id="validade_label">VALIDADE</div>
-                                  <div id="validade_place">25/12/2022</div>
-
-                                  <div id="documento_label">DOCUMENTO</div>
-                                  <div id="documento_place">213243-4 ES</div>
-                              </div>
-
+                            <div class="container" id="carterinha">
 
                             </div>
                         </div>

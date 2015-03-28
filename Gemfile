@@ -16,6 +16,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem "paperclip", "~> 4.2"
 gem 'papercrop'
+gem 'remotipart', '~> 1.2'
 
 
 

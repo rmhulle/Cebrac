@@ -24,4 +24,5 @@
 //= require webcam.js
 //= require jquery.jcrop
 //= require papercrop
+//= require jquery.remotipart
 
