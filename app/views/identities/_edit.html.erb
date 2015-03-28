@@ -1,0 +1,57 @@
+<style>
+#avatar_crop_preview_wrapper{
+  width: 90px;
+  height: 100px;
+}  
+
+div#avatar_cropbox>img{
+  width: 300px;
+  height: 300px;
+}
+
+
+</style>
+<div class="wrapper wrapper-content">
+<div class="container">
+  <%= simple_form_for(@identity, :remote => true, :html => {:multipart => true}) do |f| %>
+
+    <div class="col-md-4">
+        <div class="form-inputs">
+          <%= f.cropbox :avatar, :width => 300 %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit %>
+        </div>    
+    </div>
+
+    <div class="col-md-4">
+      <div id="Camada_1">
+          <div id="foto_place"><%= f.crop_preview :avatar, :width => 90, :height => 100 %></div>
+          <div id="nome_label">NOME</div>
+          <p id="nome_place"><%= @identity.name %></p>
+          
+          <div id="curso_label">CURSO</div>
+          <div id="curso_place"><%= @identity.lecture %></div>
+
+          <div id="unidade_label">UNIDADE</div>
+          <div id="unidade_place"><%= @identity.campus %></div>      
+
+          
+          <div id="matricula_label">MATRÍCULA</div>
+          <div id="matricula_place"><%= @identity.enrollment_id %></div>
+          
+          
+          <div id="validade_label">VALIDADE</div>
+          <div id="validade_place"><%= @identity.expiration %></div>
+
+          <div id="documento_label">DOCUMENTO</div>
+          <div id="documento_place"><%= @identity.document %></div>
+      </div>
+        
+
+
+    </div>
+
+     <% end %>
+</div>
+</div>
