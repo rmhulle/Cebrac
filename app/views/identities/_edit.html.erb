@@ -3,10 +3,9 @@
   width: 90px;
   height: 100px;
 }  
-
-div#avatar_cropbox>img{
-  width: 300px;
-  height: 300px;
+.btn-w-m
+{
+  margin-top: 20px;
 }
 
 
@@ -17,10 +16,10 @@ div#avatar_cropbox>img{
 
     <div class="col-md-4">
         <div class="form-inputs">
-          <%= f.cropbox :avatar, :width => 300 %>
+          <%= f.cropbox :avatar, :width => 350 %>
         </div>
         <div class="form-actions">
-          <%= f.button :submit %>
+          <%= f.button :submit, 'Usar Recorte', :class => "btn btn-w-m btn-primary"  %>
         </div>    
     </div>
 
@@ -46,12 +45,9 @@ div#avatar_cropbox>img{
 
           <div id="documento_label">DOCUMENTO</div>
           <div id="documento_place"><%= @identity.document %></div>
-      </div>
-        
-
-
+      </div> 
     </div>
 
-     <% end %>
+  <% end %>
 </div>
 </div>
