@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   end
 
   def minor
+  	@identity = Identity.find(88)
   end
 
   def modelo

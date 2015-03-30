@@ -1,0 +1,27 @@
+<div class="container">  
+  <div id="Camada_1">
+      <div id="background"><%= wicked_pdf_image_tag("camada_1.jpg") %></div>
+      <div id="foto_place"><%= wicked_pdf_image_tag @identity.avatar.url(:thumb), :class => 'avatar' %></div>
+
+      <div id="nome_label">NOME</div>
+      <p id="nome_place"><%= @identity.name %></p>
+      
+      <div id="curso_label">CURSO</div>
+      <div id="curso_place"><%= @identity.lecture %></div>
+
+      <div id="unidade_label">UNIDADE</div>
+      <div id="unidade_place"><%= @identity.campus %></div>      
+
+      
+      <div id="matricula_label">MATRICULA</div>
+      <div id="matricula_place"><%= @identity.enrollment_id %></div>
+      
+      
+      <div id="validade_label">VALIDADE</div>
+      <div id="validade_place"><%= @identity.expiration %></div>
+
+      <div id="documento_label">DOCUMENTO</div>
+      <div id="documento_place"><%= @identity.document %></div>
+  </div>
+
+  </div>

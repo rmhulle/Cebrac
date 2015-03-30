@@ -1,6 +1,6 @@
 class IdentitiesController < ApplicationController
 
-  before_action :set_identity, only: [:show, :edit, :update, :destroy, :review]
+  before_action :set_identity, only: [:show, :edit, :update, :destroy]
   # caso não esteja fazendo o upload das photos 
   skip_before_filter :verify_authenticity_token, :only => [:edit, :new, :create, :upload]
   # GET /identities
@@ -44,9 +44,17 @@ class IdentitiesController < ApplicationController
   def review
 
   end  
-
+  
   def print
-  end  
+      @identity = Identity.find(params[:identity_id])
+      filename =  "Identidade #{@identity.id}.pdf"
+      respond_to do |format|
+        format.pdf do
+          render pdf: filename ,                  # file name
+                 layout: 'layouts/pdf_base.pdf.erb'  # layout used
+        end
+      end
+    end  
 
   def upload
     File.open(upload_path, 'wb') do |f|

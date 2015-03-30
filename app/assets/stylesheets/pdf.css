@@ -1,0 +1,193 @@
+#Camada_1 {
+  position: absolute;
+  z-index: 1;
+  width: 243.78pt; 
+  height: 153.07pt;
+  top: 20mm;
+
+  right: -10mm;
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+}
+
+#background>img {
+  position: absolute;
+  z-index: 1;
+  width: 243.78pt; 
+  height: 153.07pt;
+}
+
+#nome_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 8.5pt;
+  z-index: 2;
+}
+
+#nome_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 13pt;
+  width: 147.4pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+#curso_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 42.52pt;
+  z-index: 2;
+
+
+}
+#curso_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 55pt;
+  width: 147.4pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+    z-index: 2;
+}
+
+#unidade_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 76.54pt;
+  z-index: 2;
+
+
+}
+#unidade_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 89pt;
+  width: 63pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+    z-index: 2;
+}
+#matricula_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 158.74pt;
+  top: 76.54pt;
+  z-index: 2;
+
+}
+#matricula_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 158.74pt;
+  top: 89pt;
+  width: 79.37pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+    z-index: 2;
+}
+
+#validade_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 90.71pt;
+  top: 107.71pt;
+  z-index: 2;
+
+
+}
+#validade_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 90.71pt;
+  top: 121pt;
+  width: 63pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+    z-index: 2;
+}
+
+#documento_label {
+  font-size: 10pt;
+  font-family: "Lucida Sans";
+  color: rgb(6, 29, 86);
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  left: 158.74pt;
+  top: 107.71pt;
+  z-index: 2;
+
+
+}
+#documento_place {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 158.74pt;
+  top: 121pt;
+  width: 79.37pt;
+  height: 11.3pt;
+  font-size: 9pt;
+  font-family: "Lucida Sans";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+    z-index: 2;
+}
+#foto_place {
+
+  position: absolute;
+  left: 12pt;
+  top: 9pt;
+  width: 68pt;
+  height: 75pt;
+  z-index: 2;
+}
+
+img.avatar {
+  width: 68pt;
+  height: 75pt;
+  z-index: 2;
+}

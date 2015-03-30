@@ -21,7 +21,7 @@ Myapp::Application.routes.draw do
 
   get "home/index"
   get "home/minor"
- get "home/modelo"
+  get "home/modelo"
 
 
   # Example of regular route:
