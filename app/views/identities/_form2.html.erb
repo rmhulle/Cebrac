@@ -1,14 +1,15 @@
 
 <div class="col-lg-12">
+
+  <div class="col-md-4">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
             <h5>Editar Usuário<small> Edite apenas as informações necessárias</small></h5>
         </div>
         <div class="ibox-content">
             <div class="row"> 
-              <%= simple_form_for(@identity, :html => {:multipart => true}) do |f| %>
+                  <%= simple_form_for(@identity, :html => {:multipart => true}) do |f| %>
                   <%= f.error_notification %>
-                  <div class="col-md-4">
                       <div class="form-inputs">
                         <%= f.input :name, label: 'Nome do Aluno', input_html: { maxlength: 26 }, placeholder: 'Ex. Daniel Carvalho' %>
                         <%= f.input :lecture, label: 'Curso', input_html: { maxlength: 26 }, placeholder: 'Ex. Administração' %>
@@ -16,15 +17,30 @@
                         <%= f.input :enrollment_id, label: 'Matrícula', input_html: { maxlength: 12 }, placeholder: 'Ex. 0123456' %>
                         <%= f.input :expiration, label: 'Validade', placeholder: 'Ex. 20/12/2020' %>  
                         <%= f.input :document, label: 'Documento', input_html: { maxlength: 11 }, placeholder: 'Ex. 223443-6 ES' %>
-                      </div>  
-                    </div>  
-                      <div class="col-md-4">
-                       
+                      </div>
+                  <div class="form-actions">
+                    <%= f.button :submit, 'Atualizar Dados' %>
+                  </div>  
+                  <% end %>    
+              </div>  
+        </div>      
+    </div>
+  </div>
+
+    <div class="col-md-8">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Editar Imagem<small> Reposicione o retangulo para selecionar um área na foto</small></h5>
+        </div>
+        <div class="ibox-content">
+            <div class="row">             
+              <%= simple_form_for(@identity, :html => {:multipart => true}) do |f| %>
+                    <div class="col-md-6">    
                         <div class="form-inputs">
                           <%= f.cropbox :avatar, :width => 350 %>
                         </div>
-                      </div>
-                      <div class="col-md-4">
+                    </div>    
+                    <div class="col-md-6">    
                         <div id="Camada_1">
                           <div id="foto_place"><%= f.crop_preview :avatar, :width => 90, :height => 100 %></div>
                           <div id="nome_label">NOME</div>
@@ -46,15 +62,17 @@
 
                           <div id="documento_label">DOCUMENTO</div>
                           <div id="documento_place"><%= @identity.document %></div>
-                      </div> 
-                    </div>
-
-                  <div class="form-actions">
-                    <%= f.button :submit, 'Atualizar Informações' %>
+                        </div> 
+                    </div>    
                   </div>
-                <% end %>
 
-            </div>
-            </div>
+                      <div class="form-actions">
+                        <%= f.button :submit, 'Atualizar Imagem' %>
+                      </div>      
+              <% end %>
+          </div>    
+          </div>
+          </div>  
         </div>
-</div>
+        </div>
+
