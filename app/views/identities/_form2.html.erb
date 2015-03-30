@@ -1,42 +1,60 @@
 
 <div class="col-lg-12">
-   <div class="col-lg-6">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5>Basic form <small>Simple login form example</small></h5>
+            <h5>Editar Usuário<small> Edite apenas as informações necessárias</small></h5>
         </div>
         <div class="ibox-content">
-            <div class="row">
-           
+            <div class="row"> 
               <%= simple_form_for(@identity, :html => {:multipart => true}) do |f| %>
                   <%= f.error_notification %>
-
-                  <div class="form-inputs">
-                    <%= f.input :name %>
-                    <%= f.input :enrollment_id %>
-                    <%= f.input :lecture %>
-                      <div class="form-group" id="data_1">
-                        <label class="string optional control-label" for="identity_enrollment_id">Expiration</label>
-                          <div class="input-group date">
-                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                              <input class="string optional form-control" type="text" name="identity[expiration]" id="identity_expiration"> 
-                         </div>
+                  <div class="col-md-4">
+                      <div class="form-inputs">
+                        <%= f.input :name, label: 'Nome do Aluno', input_html: { maxlength: 26 }, placeholder: 'Ex. Daniel Carvalho' %>
+                        <%= f.input :lecture, label: 'Curso', input_html: { maxlength: 26 }, placeholder: 'Ex. Administração' %>
+                        <%= f.input :campus, label: 'Unidade', input_html: { maxlength: 11 }, placeholder: 'Ex. Vila Velha' %>
+                        <%= f.input :enrollment_id, label: 'Matrícula', input_html: { maxlength: 12 }, placeholder: 'Ex. 0123456' %>
+                        <%= f.input :expiration, label: 'Validade', placeholder: 'Ex. 20/12/2020' %>  
+                        <%= f.input :document, label: 'Documento', input_html: { maxlength: 11 }, placeholder: 'Ex. 223443-6 ES' %>
+                      </div>  
+                    </div>  
+                      <div class="col-md-4">
+                       
+                        <div class="form-inputs">
+                          <%= f.cropbox :avatar, :width => 350 %>
+                        </div>
                       </div>
-                    <%= f.input :campus %>
-                    <%= f.input :user_name %>
-                    <%= f.input :user_id %>
-                    <%= f.input :last_printed %>
-                    <%= f.cropbox :avatar, :width => 200 %>
-                    <%= f.crop_preview :avatar, :width => 89 %>
+                      <div class="col-md-4">
+                        <div id="Camada_1">
+                          <div id="foto_place"><%= f.crop_preview :avatar, :width => 90, :height => 100 %></div>
+                          <div id="nome_label">NOME</div>
+                          <p id="nome_place"><%= @identity.name %></p>
+                          
+                          <div id="curso_label">CURSO</div>
+                          <div id="curso_place"><%= @identity.lecture %></div>
+
+                          <div id="unidade_label">UNIDADE</div>
+                          <div id="unidade_place"><%= @identity.campus %></div>      
+
+                          
+                          <div id="matricula_label">MATRÍCULA</div>
+                          <div id="matricula_place"><%= @identity.enrollment_id %></div>
+                          
+                          
+                          <div id="validade_label">VALIDADE</div>
+                          <div id="validade_place"><%= @identity.expiration %></div>
+
+                          <div id="documento_label">DOCUMENTO</div>
+                          <div id="documento_place"><%= @identity.document %></div>
+                      </div> 
                     </div>
 
                   <div class="form-actions">
-                    <%= f.button :submit %>
+                    <%= f.button :submit, 'Atualizar Informações' %>
                   </div>
                 <% end %>
 
             </div>
             </div>
         </div>
-    </div>
 </div>
