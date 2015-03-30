@@ -33,7 +33,7 @@ class IdentitiesController < ApplicationController
      if @identity.save
        format.html { render "review", notice: 'Identity was successfully created.' }
        format.json { render action: 'show', status: :created, location: @identity }
-       format.js {}
+       format.js   { }
      else
        format.html { render action: 'new' }
        format.json { render json: @identity.errors, status: :unprocessable_entity }
