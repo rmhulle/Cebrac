@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
   private
 
   def layout
-    # only turn it off for login pages:
     is_a?(Devise::SessionsController) ? "empty" : "application"
   end
   

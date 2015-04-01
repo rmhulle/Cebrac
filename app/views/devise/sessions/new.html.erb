@@ -1,15 +1,31 @@
-<h2>Log in</h2>
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+                <img src="http://cebrac.com.br/wp-content/themes/boldy/images/cebrac/logo_cebrac.png" alt="">
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+            </div>
+            
+            <br>
+            <h3>Controle de Identidade Estudantil</h3>
+            <p>
+                Sistema proprietário CEBRAC
+            </p>
+            <br>
+            <p>Digite suas credenciais para entrar no sistema.</p>
+
+			<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ 				<div class="form-inputs">
+			    <%= f.input :email, required: false, autofocus: true %>
+			    <%= f.input :password, required: false %>
+			    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+			  	</div>
+
+			  <div class="form-actions">
+			    <%= f.button :submit, "Entrar" %>
+			  </div>
+			<% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>

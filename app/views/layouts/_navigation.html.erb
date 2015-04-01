@@ -13,11 +13,6 @@
 
                 </div>
             </li>
-            <li class="<%= 'active' if current_page?('/') %>">
-                <%= link_to "/" do %>
-                <i class="fa fa-laptop"></i> <span class="nav-label">Principal</span>
-                <% end %>
-            </li>
             <li class="<%= 'active' if current_page?('/identities') %>">
                 <%= link_to identities_path do %>
                 <i class="fa fa-search"></i> <span class="nav-label">Buscar Alunos</span>
@@ -28,8 +23,8 @@
                 <i class="fa fa-plus-square-o"></i> <span class="nav-label">Cadatrar Aluno</span>
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('/users/') %>">
-                <%= link_to "/home/minor" do %>
+            <li class="<%= 'active' if current_page?('/home/index') %>">
+                <%= link_to "/home/index" do %>
                 <i class="fa fa-group"></i> <span class="nav-label">Gerenciar Usuários</span>
                 <% end %>
             </li>
