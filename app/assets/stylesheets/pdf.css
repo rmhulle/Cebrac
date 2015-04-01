@@ -1,14 +1,13 @@
-#Camada_1 {
+#Camada_1{
   position: absolute;
   z-index: 1;
   width: 243.78pt; 
   height: 153.07pt;
-  top: 20mm;
 
-  right: -10mm;
-  -webkit-transform:rotate(90deg);
-  -moz-transform:rotate(90deg);
-  -o-transform:rotate(90deg);
+  top: 5mm;
+  left: 28mm;
+
+
 }
 
 #background>img {
@@ -187,7 +186,7 @@
 }
 
 img.avatar {
-  width: 68pt;
-  height: 75pt;
+  width: 69pt;
+  height: 76pt;
   z-index: 2;
 }

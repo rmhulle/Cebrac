@@ -3,8 +3,8 @@ WickedPdf.config = {
   #:layout => "pdf.html",
 	:exe_path => '/usr/local/bin/wkhtmltopdf',
 	:page_size =>'A4',
-	:margin =>  {  	top: 0,                     # default 10 (mm)
-                	bottom: 0,
-                	left: 0,
-                	right: 0 }
+	:margin =>  {  	top: 1,                     # default 10 (mm)
+                	bottom: 1,
+                	left: 1,
+                	right: 1 }
 	}
