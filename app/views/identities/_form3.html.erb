@@ -205,7 +205,7 @@ img.avatar {
                               <div class="form-inputs">
                                 <%= f.input :name, label: 'Nome do Aluno', input_html: { maxlength: 26 }, placeholder: 'Ex. Daniel Carvalho' %>
                                 <%= f.input :lecture, label: 'Curso', input_html: { maxlength: 26 }, placeholder: 'Ex. Administração' %>
-                                <%= f.input :campus, label: 'Unidade', input_html: { maxlength: 11 }, placeholder: 'Ex. Vila Velha' %>
+                                <%= f.input :campus, collection: @places, label: 'Unidade', input_html: { maxlength: 11 }, placeholder: 'Ex. Vila Velha' %>
                                 <%= f.input :enrollment_id, label: 'Matrícula', input_html: { maxlength: 12 }, placeholder: 'Ex. 0123456' %>
                                 <%= f.input :expiration, label: 'Validade', placeholder: 'Ex. 20/12/2020' %>  
                                 <%= f.input :document, label: 'Documento', input_html: { maxlength: 11 }, placeholder: 'Ex. 223443-6 ES' %>

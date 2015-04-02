@@ -1,5 +1,7 @@
 Myapp::Application.routes.draw do
 
+  resources :lectures
+  resources :places
   resources :identities do
     post 'upload', :on => :collection
     get  'review'
