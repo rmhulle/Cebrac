@@ -20,7 +20,7 @@ gem 'papercrop'
 gem 'remotipart', '~> 1.2'
 
 gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-heroku'
 
 
 
