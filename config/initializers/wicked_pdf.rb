@@ -1,5 +1,5 @@
 WickedPdf.config = {
-	WKHTMLTOPDF_PATH = File.expand_path "../../bin/wkhtmltopdf-linux-amd64", __FILE__
+	WKHTMLTOPDF_PATH = File.expand_path ("../../bin/wkhtmltopdf-linux-amd64", __FILE__)
 	:wkhtmltopdf => WKHTMLTOPDF_PATH,
 #:layout => "pdf.html",
 	:exe_path => WKHTMLTOPDF_PATH,
