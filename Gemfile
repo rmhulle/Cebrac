@@ -18,9 +18,9 @@ gem 'jbuilder', '~> 1.2'
 gem "paperclip", "~> 4.2"
 gem 'papercrop'
 gem 'remotipart', '~> 1.2'
-gem 'wkhtmltopdf-binary'
-gem 'wicked_pdf'
 
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 
 
