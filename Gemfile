@@ -7,7 +7,8 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'simple_form'
 gem 'jquery-rails'
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'pg'
 
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'

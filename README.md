@@ -32,3 +32,14 @@ Sistema de identidade estudantil
 - Expiration
 - picture
 - last_printed, as :date
+
+
+ Host: 172.17.42.1
+       Port: 49153
+       User: 'root'
+       Password: 'mWi5nSbNTKpczcI7'
+       Database: 'db'
+
+       Url: 'postgres://root:mWi5nSbNTKpczcI7@172.17.42.1:49153/db'
+
+root@Cebrac:/var/lib/dokku/plugins# 
