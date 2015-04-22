@@ -1,7 +1,8 @@
 WickedPdf.config = {
-#	:wkhtmltopdf => '/usr/local/bin/wkhtmltopdf',
+	WKHTMLTOPDF_PATH = File.expand_path "../../bin/wkhtmltopdf-linux-amd64", __FILE__
+	:wkhtmltopdf => WKHTMLTOPDF_PATH,
 #:layout => "pdf.html",
-#	:exe_path => '/usr/local/bin/wkhtmltopdf',
+	:exe_path => WKHTMLTOPDF_PATH,
 	:page_size =>'A4',
 	:margin =>  {  	top: 1,                     # default 10 (mm)
                 	bottom: 1,
