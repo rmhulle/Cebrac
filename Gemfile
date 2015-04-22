@@ -35,6 +35,4 @@ group :development do
   gem 'meta_request'
 end
 
-group :production do
-  
-end
+gem 'rails_12factor', group: :production
