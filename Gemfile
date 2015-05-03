@@ -19,8 +19,9 @@ gem "paperclip", "~> 4.2"
 gem 'papercrop'
 gem 'remotipart', '~> 1.2'
 
+gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
-gem 'wkhtmltopdf-heroku'
+
 
 
 
@@ -35,4 +36,3 @@ group :development do
   gem 'meta_request'
 end
 
-gem 'rails_12factor', group: :production
