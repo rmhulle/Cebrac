@@ -7,7 +7,7 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'simple_form'
 gem 'jquery-rails'
-#gem 'sqlite3'
+
 gem 'pg'
 
 gem 'sass-rails'
@@ -30,7 +30,8 @@ gem 'wicked_pdf'
 #end
 
 
-group :development do
+group :development do 
+  gem 'sqlite3'	
   gem "better_errors"
   gem "binding_of_caller"
   gem 'meta_request'
