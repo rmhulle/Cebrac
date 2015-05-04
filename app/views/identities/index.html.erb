@@ -45,9 +45,9 @@
         <td><%= identity.campus %></td>
         <td><%= identity.user_name %></td>
         <td><%= identity.last_printed %></td>
-        <td><%= link_to 'Imprimir', identity_print_path(identity, :format => :pdf), :id => identity.id %></td>
+        <td><%= link_to 'Imprimir', identity_print_path(identity, :format => :pdf), :id => identity.id , :target => "_blank" %></td>
         <td><%= link_to 'Editar', edit_identity_path(identity) %></td>
-        <td><%= link_to 'Deletar', identity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Deletar', identity, method: :delete, data: { confirm: 'Todos dados serão deletados!' } %></td>
       </tr>
     <% end %>
 </tbody>
@@ -80,4 +80,3 @@ $(function() {
 
 <br>
 
-<%= link_to 'New Identity', new_identity_path %>

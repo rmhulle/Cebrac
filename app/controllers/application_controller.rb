@@ -9,7 +9,8 @@ class ApplicationController < ActionController::Base
   private
 
   def layout
-    is_a?(Devise::SessionsController) ? "empty" : "application"
+    is_a?(Devise::SessionsController || Devise::RegistrationsController) ? "empty" : "application"
+    
   end
   
   protected

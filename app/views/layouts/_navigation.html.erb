@@ -6,7 +6,10 @@
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="clear">
                             <span class="block m-t-xs">
-                                <strong class="font-bold"><%= 'rodrigo' %>,<br> Seja Bem vindo!!</strong>
+                                <strong class="font-bold">
+                                <% if current_user.try(:name) %>
+                                    <%= current_user.name %> 
+                                <% end %><br> Seja Bem vindo!!</strong>
                             </span> 
                         </span>
                     </a>
@@ -20,14 +23,10 @@
             </li>
             <li class="<%= 'active' if current_page?('/identities/new') %>">
                 <%= link_to new_identity_path do %>
-                <i class="fa fa-plus-square-o"></i> <span class="nav-label">Cadatrar Aluno</span>
+                <i class="fa fa-plus-square-o"></i> <span class="nav-label">Cadastrar Aluno</span>
                 <% end %>
             </li>
-            <li class="<%= 'active' if current_page?('/home/index') %>">
-                <%= link_to "/home/index" do %>
-                <i class="fa fa-group"></i> <span class="nav-label">Gerenciar Usuários</span>
-                <% end %>
-            </li>
+            <% if current_user.try(:role) %>
             <li class="<%= 'active' if current_page?('/lectures') %>">
                 <%= link_to "/lectures/" do %>
                 <i class="fa fa-graduation-cap"></i> <span class="nav-label">Cadastrar Cursos</span>
@@ -38,6 +37,12 @@
                 <i class="fa fa-home"></i> <span class="nav-label">Cadatrar Unidades</span>
                 <% end %>
             </li>
+                <li class="<%= 'active' if current_page?('/home/index') %>">
+                <%= link_to "/home/index" do %>
+                <i class="fa fa-home"></i> <span class="nav-label">Lista de Usuários</span>
+                <% end %>
+            </li>
+            <% end %>
             <li class="<%= 'active' if current_page?('/users/signout') %>">
                 <%= link_to destroy_user_session_path, :method => :delete  do %>
                 <i class="fa fa-sign-out"></i> <span class="nav-label">Sair do Sistema</span>

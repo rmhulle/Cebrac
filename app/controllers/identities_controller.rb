@@ -1,6 +1,8 @@
 class IdentitiesController < ApplicationController
 
+  before_filter :authenticate_user!, only: [:index,:new,:show, :edit, :update, :destroy]
   before_action :set_identity, only: [:show, :edit, :update, :destroy]
+
   # caso não esteja fazendo o upload das photos 
   skip_before_filter :verify_authenticity_token, :only => [:edit, :new, :create, :upload]
   # GET /identities
@@ -16,11 +18,15 @@ class IdentitiesController < ApplicationController
 
   # GET /identities/new
   def new
+    @places = Place.all
+    @lectures = Lecture.all
     @identity = Identity.new
   end
 
   # GET /identities/1/edit
   def edit
+    @places = Place.all
+    @lectures = Lecture.all
   end
 
   # POST /identities
@@ -47,6 +53,8 @@ class IdentitiesController < ApplicationController
   
   def print
       @identity = Identity.find(params[:identity_id])
+      @identity.last_printed = Time.now.to_s
+      @identity.save
       filename =  "Identidade #{@identity.id}.pdf"
       respond_to do |format|
         format.pdf do

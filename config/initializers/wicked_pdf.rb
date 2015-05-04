@@ -1,4 +1,3 @@
-WKHTMLTOPDF_PATH = File.expand_path('../../bin/wkhtmltopdf-linux-amd64',__FILE__)
 
 WickedPdf.config = {
 	

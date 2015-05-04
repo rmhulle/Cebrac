@@ -5,4 +5,6 @@ class Identity < ActiveRecord::Base
  
  crop_attached_file :avatar, :aspect => "90:100"
 
+ 
+
 end
