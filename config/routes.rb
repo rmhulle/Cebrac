@@ -9,6 +9,8 @@ Myapp::Application.routes.draw do
   end
 
   devise_for :users
+    
+  match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
 
   devise_scope :user do
     authenticated :user do
