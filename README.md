@@ -9,7 +9,7 @@ Sistema de identidade estudantil
 - email, string,
 - role, string
 
-
+Colocar uma condicional "current.User.role =='admin' antes do destroy
 
 ### Class
 - id
